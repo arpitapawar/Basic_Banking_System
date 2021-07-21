@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer money</title>
+    <style>
+        #imag{
+            position: relative;
+        }
+        input{
+            margin-left:20px;
+
+        }
+        p{
+            cursor: pointer;
+            padding: 3px 6px;
+            text-align: left;
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .container{
+            top:30%;
+            position: absolute;
+            border: 5px outset bisque;
+            margin-left:5%;
+            margin-top:10%;
+           margin-right: 20%;
+           padding-top: 5%;
+           padding-bottom: 5%;
+           padding-left: 10%;
+           margin-bottom: 10%;
+            width:30%;
+            background-color:ivory;
+            opacity: 0.9;
+        }
+        .h_h1{
+          color:white;
+          text-align: center;
+          margin-top: 0%;
+          letter-spacing: 20px;
+          font-size: 50px;
+          padding-top: 30px;}
+      .h_nav{
+          background-color: paleturquoise;
+          padding:23px;
+          text-align: right;}
+      .h_a{
+        text-decoration: none;
+          padding:20px;
+          font-size: 20px;
+          color:navy;}
+            header{
+          background-color:midnightblue;
+          padding:30px;
+          padding-bottom: 45px;}
+          .f_tem{
+        padding:20px;}
+                    footer {
+            background-color: midnightblue;
+            overflow: hidden;
+        }
+
+        footer a {
+            text-decoration: none;
+            padding: 20px;
+            text-align: center;
+            float: left;
+            color: white;
+        }
+
+</style>
+</head>
+<body>
+  <header>
+    <h1 class="h_h1">TRANSACTION DETAILS</h1>
+</header>
+  <div>
+    <nav class="h_nav">
+        <a class="h_a" href="/">Home</a>
+        <a class="h_a" href="/second">Customer View</a>
+        <a class="h_a" href="/fourth">Transaction History</a>
+    </nav>
+</div>
+    <img id="imag" src="{{url_for('static', filename='image/trasnfer1.jpg')}}" alt="" style="width:100%">
+    <div class="container">
+       <form method="POST" action="" autocomplete="on">
+
+        <div class="f_item">Senders Name <input align="middle" type="text" name="s_name" style="width:200px"/></div>
+            <br>
+        <div class="f_item">Senders Acct no <input align="right" type="text" name="s_acct" style="width:200px"/></div>
+            <br>
+        <div class="f_item">Receiver's Name <input align="right"  type="text" name="r_name" style="width:200px"/></div>
+            <br>
+        <div class="f_item">Receviver's Acct no <input align="right" type="text" name="r_acct" style="width:200px"/></div>
+            <br>
+           <div class="f_item">Amount<input align="middle" type="text" name="amt" style="width:200px"/></div>
+            <br>
+        <div class="f_item"><input type="submit"></div>
+    </form>
+    </div>
+<footer>
+    <a href="">Contact</a>
+    <a href="">FAQ</a>
+    <a href="">Term of use</a>
+    <a href="">Privacy</a>
+    <a href="">Policy</a>
+</footer>
+</body>
+</html>
