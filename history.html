@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction history</title>
+     <link rel="stylesheet" href="{{url_for('static', filename='history.css')}}">
+</head>
+<body>
+   <header>
+    <h1 class="h_h1">TRANSACTION DETAILS</h1>
+</header>
+  <div>
+    <nav class="h_nav">
+        <a class="h_a" href="/">Home</a>
+        <a class="h_a" href="/second">Customer View</a>
+
+    </nav>
+</div>
+    <img "id="back"" src="{{url_for('static', filename='image/history.png')}}" alt="" style="width:100%">
+
+      <div class="cust_cont">
+        <div class="cust_item t1">
+<table>
+    <tr>
+      <th>Sr.No</th>
+        <th>SendersName</th>
+      <th>ReceiversName</th>
+         <th>Senders Account_no</th>
+        <th>Receivers Account_no</th>
+        <th>Amount</th>
+    </tr>
+    <tbody>
+      {% for cust in transfers %}
+      <tr>
+        <td>{{ cust[0]}}</td>
+        <td>{{ cust[1]}}</td>
+        <td>{{ cust[2]}}</td>
+        <td>{{ cust[3]}}</td>
+        <td>{{ cust[4]}}</td>
+          <td>{{ cust[5]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+    </div>
+    </div>
+<footer>
+    <a href="">Contact</a>
+    <a href="">FAQ</a>
+    <a href="">Term of use</a>
+    <a href="">Privacy</a>
+    <a href="">Policy</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer money</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='transfer.css')}}">
+</head>
+<body>
+  <header>
+    <h1 class="h_h1">TRANSACTION DETAILS</h1>
+</header>
+  <div>
+    <nav class="h_nav">
+        <a class="h_a" href="/">Home</a>
+        <a class="h_a" href="/second">Customer View</a>
+        <a class="h_a" href="/fourth">Transaction History</a>
+    </nav>
+</div>
+    <img id="imag" src="{{url_for('static', filename='image/trasnfer1.jpg')}}" alt="" style="width:100%">
+    <div class="container">
+       <form method="POST" action="" autocomplete="on">
+
+        <div class="f_item">Senders Name <input align="middle" type="text" name="s_name" style="width:200px"/></div>
+            <br>
+        <div class="f_item">Senders Acct no <input align="right" type="text" name="s_acct" style="width:200px"/></div>
+            <br>
+        <div class="f_item">Receiver's Name <input align="right"  type="text" name="r_name" style="width:200px"/></div>
+            <br>
+        <div class="f_item">Receviver's Acct no <input align="right" type="text" name="r_acct" style="width:200px"/></div>
+            <br>
+           <div class="f_item">Amount<input align="middle" type="text" name="amt" style="width:200px"/></div>
+            <br>
+        <div class="f_item"><input type="submit"></div>
+    </form>
+    </div>
+<footer>
+    <a href="">Contact</a>
+    <a href="">FAQ</a>
+    <a href="">Term of use</a>
+    <a href="">Privacy</a>
+    <a href="">Policy</a>
+</footer>
+</body>
+</html>

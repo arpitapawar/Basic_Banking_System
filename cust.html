@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer View</title>
+     <link rel="stylesheet" href="{{url_for('static', filename='cust.css')}}">
+</head>
+<body>
+    <header>
+    <h1 class="h_h1">CUSTOMER DETAILS</h1>
+</header>
+  <div>
+    <nav class="h_nav">
+        <a class="h_a" href="/">Home</a>
+        <a class="h_a" href="/fourth">Transaction History</a>
+
+    </nav>
+</div>
+    <img id="back" src="{{url_for('static', filename='image/cust1.jpg')}}" alt="" style="width:110%" >
+
+      <div class="cust_cont">
+        <div class="cust_item t1">
+<table>
+    <tr>
+      <th>Sr.No</th>
+        <th>A/C no</th>
+      <th>Name</th>
+         <th>City</th>
+        <th>Email Id</th>
+        <th>Contact no</th>
+        <th>A/C bal</th>
+      <th>A/C type</th>
+    </tr>
+
+     <tbody>
+      {% for customer in all_cust %}
+      <tr>
+        <td>{{ customer[0]}}</td>
+        <td>{{ customer[1]}}</td>
+        <td>{{ customer[2]}}</td>
+        <td>{{ customer[3]}}</td>
+        <td>{{ customer[4]}}</td>
+        <td>{{ customer[5]}}</td>
+        <td>{{ customer[6]}}</td>
+        <td>{{ customer[7]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+         </div>
+             <a href="/third" target="_blank">
+            <button id="but1">Transfer money</button>
+             </a>
+            </div>
+<footer>
+    <a href="">Contact</a>
+    <a href="">FAQ</a>
+    <a href="">Term of use</a>
+    <a href="">Privacy</a>
+    <a href="">Policy</a>
+</footer>
+</body>
+</html>
